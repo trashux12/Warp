@@ -1,6 +1,8 @@
 # Warp-Plus
-
-Warp-Plus is an open-source implementation of Cloudflare's Warp, enhanced with Psiphon integration for circumventing censorship. This project aims to provide a robust and cross-platform VPN solution that can use psiphon on top of warp and warp-in-warp for changing the user virtual nat location.
+- Free 
+- Fast
+- Secure
+- Easy To Use
 
 ## Features
 
@@ -13,22 +15,8 @@ Warp-Plus is an open-source implementation of Cloudflare's Warp, enhanced with P
 
 ### Prerequisites
 
-- You can download prebuilt binaries or compile it with Go (You MUST use go 1.21)
+- You can download prebuilt [binaries](https://github.com/trashux12/Warp/releases/tag/v1) or compile it with Go (You MUST use go 1.21)
 - Basic understanding of VPN and proxy configurations
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/bepass-org/warp-plus.git
-   cd warp-plus
-   ```
-
-2. Build the project:
-   ```bash
-   go build
-   ```
-
 ### Usage
 
 ```
@@ -82,25 +70,3 @@ FLAGS
 - Ukraine (UA)
 - United States (US)
 
-### Termux (BROKEN)
-
-```
-bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/wireguard-go/master/termux.sh)
-```
-![1](https://github.com/Ptechgithub/configs/blob/main/media/18.jpg?raw=true)
-
-- بعد از نصب برای اجرای مجدد فقط کافیه که `warp` یا `usef` یا `./warp` را وارد کنید . 
-- اگر با 1 نصب نشد و خطا گرفتید عدد 2 رو انتخاب کنید یعنی Arm.
-- برای نمایش راهنما ` warp -h` را وارد کنید. 
-- ای پی و پورت `127.0.0.1:8086`پروتکل socks
-- در روش warp به warp plus مقدار account id را وارد میکنید و با این کار هر 20 ثانیه 1 GB به اکانت شما اضافه میشود. 
-- برای تغییر  لوکیشن با استفاده از سایفون برای مثال به USA  از دستور  زیر استفاده کنید: 
-- `warp -cfon -country US`
-- برای اسکن ای پی سالم وارپ از دستور `warp -scan` استفاده کنید. 
-- برای ترکیب (chain) دو کانفیگ برای تغییر لوکیشن از دستور `warp -gool` استفاده کنید. 
-
-## Acknowledgements
-
-- Cloudflare Warp
-- Psiphon
-- All contributors and supporters of this project
