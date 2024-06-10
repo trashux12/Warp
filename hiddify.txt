@@ -42,40 +42,29 @@
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
+        "188.114.96.3",
+        "188.114.97.3",
         "2a06:98c1:3120::6",
         "2a06:98c1:3121::6",
-        "188.114.96.6",
-        "188.114.97.6",
-        "104.17.148.22",
-        "104.17.147.22",
+        "104.18.203.232",
+        "104.18.202.232",
+        "188.114.97.3",
+        "188.114.96.3",
         "2a06:98c1:3121::3",
-        "2a06:98c1:3120::3",
-        "188.114.97.6",
-        "188.114.96.6"
+        "2a06:98c1:3120::3"
       ]
     },
     "independent_cache": true
   },
   "inbounds": [
     {
-      "type": "tun",
-      "tag": "tun-in",
-      "mtu": 9000,
-      "inet4_address": "172.19.0.1/28",
-      "auto_route": true,
-      "strict_route": true,
-      "endpoint_independent_nat": true,
-      "stack": "mixed",
-      "sniff": true,
-      "sniff_override_destination": true
-    },
-    {
       "type": "mixed",
       "tag": "mixed-in",
       "listen": "127.0.0.1",
       "listen_port": 2334,
       "sniff": true,
-      "sniff_override_destination": true
+      "sniff_override_destination": true,
+      "set_system_proxy": true
     },
     {
       "type": "direct",
@@ -105,24 +94,6 @@
       "url": "http://cp.cloudflare.com/",
       "interval": "10m0s",
       "idle_timeout": "1h40m0s"
-    },
-    {
-      "type": "wireguard",
-      "tag": "Hiddify Warp ✅",
-      "detour": "auto",
-      "local_address": [
-        "172.16.0.2/24",
-        "2606:4700:110:846b:eb66:1833:1bd6:2862/128"
-      ],
-      "private_key": "OApceJbhrnwl2YimYAQLoRZhyUiIZVoBmRiUrNFvHFE=",
-      "server": "162.159.195.126",
-      "server_port": 3854,
-      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": "AAAA",
-      "mtu": 1280,
-      "fake_packets": "5-10",
-      "fake_packets_size": "40-100",
-      "fake_packets_delay": "20-200"
     },
     {
       "type": "wireguard",
@@ -198,7 +169,7 @@
         "outbound": "bypass"
       }
     ],
-    "final": "Hiddify Warp ✅",
+    "final": "select",
     "auto_detect_interface": true,
     "override_android_vpn": true
   },
@@ -209,7 +180,7 @@
     },
     "clash_api": {
       "external_controller": "127.0.0.1:6756",
-      "secret": "u3na5j0i7nr9aR0p"
+      "secret": "cWR_44g1ogK9xgTI"
     }
   }
 }
